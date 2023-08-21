@@ -1,0 +1,62 @@
+<!-- Comienza el Header -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+¡Bienvenido! 
+   </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Termina el Header -->
+
+<!-- Comienza el Content -->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">¡Bienvenido!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Comienza un Card -->
+  <ion-card>
+    <!-- Contenido de un Card -->
+    <ion-card-content>
+      <ion-item lines="none">
+        <!-- {{interpolacion}} 
+          Permite mostrar los datos desde el script a la visual
+          verificar el data en el home.page.ts
+        -->
+        <ion-label >Usuario: {{data.usuario}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+    <!-- Contenido de un Card -->
+  </ion-card>
+  <br>
+
+  <ion-label type="text">Nombre: <ion-input></ion-input> </ion-label>
+  <br>
+
+  <ion-label type="text">Apellido: <ion-input></ion-input> </ion-label>
+
+  <br>
+
+  <ion-label>Nivel Educacional
+    <br>
+
+  <ion-list>   
+    <ion-select label="Seleccion de nivel" label-placement="stacked">
+
+      <ion-select-option value="Basica">Basica</ion-select-option>
+      <ion-select-option value="Media">Media</ion-select-option>
+      <ion-select-option value="Tecnica">Tecnica</ion-select-option>
+      <ion-select-option value="Universitaria">Universitaria</ion-select-option>
+    </ion-select>
+  </ion-list>
+  
+  <br>
+
+</ion-label>Fecha de nacimiento:
+<ion-label>
+  <ion-datetime presentation="date" [preferWheel]="true"></ion-datetime>
+</ion-label>
+</ion-content>
+<!-- Termina el Content -->
+
