@@ -1,10 +1,29 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Mi Página Principal
+      TeLlevoAPP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<p>lorem</p></ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">      TeLlevoAPP      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <ion-item lines="none">
+
+        <ion-label >Usuario: {{data.usuario}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+    <ion-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore recusandae accusantium eum aliquam, voluptatum et provident reprehenderit magnam voluptatibus! Illo atque voluptates consequuntur ipsam harum corrupti voluptatem voluptatum saepe repellendus!</ion-text>
+    <br>
+    <br>
+    <br>
+    <ion-button routerLink="/login"expand="block"  color="primary">Volver</ion-button>        
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,56 @@
+// Variables globales
+$primary-color: #488aff;
+$secondary-color: #32db64;
+$danger-color: #f53d3d;
+$light-color: #f4f4f4;
+$dark-color: #333333;
+
+
+ion-content {
+    --background: $light-color;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+  }
+--background{
+    color: #f4f4f4;
+}
+ion-button {
+    --background: $primary-color;
+    --color: #ffffff; 
+    position: center;
+    &.secondary {
+      --background: $secondary-color;
+    }
+  
+    &.danger {
+      --background: $danger-color;
+    }
+  }
+ion-header {
+  --background: $primary-color;
+  ion-title {
+    color: #ffffff;
+  }
+}
+ion-list {
+  ion-item {
+    border-bottom: 1px solid $light-color;
+  }
+}
+ion-card {
+  ion-card-content {
+    padding: 16px;
+  }
+}
+ion-padding {
+  padding: 16px;
+}
+
+ion-margin {
+  margin: 16px;
+}
+ion-icon {
+  font-size: 24px;
+}
