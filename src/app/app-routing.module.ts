@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
+  {
+    path: 'pasajero',
+    loadChildren: () => import('./pasajero/pasajero.module').then( m => m.PasajeroPageModule)
+  },
+  {
+    path: 'conductor',
+    loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
+  },
 ];
 
 @NgModule({

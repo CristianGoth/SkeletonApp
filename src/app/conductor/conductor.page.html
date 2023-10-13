@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start" >
+     </ion-buttons>
+    <ion-title>TeLlevo<span>APP</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>INICIAR NUEVO VIAJE</ion-card-title> 
+      <ion-card-subtitle>Jean Rivera</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-button color="warning" fill="outline" class="large-button">Mi Perfil</ion-button>
+  <ion-button id="open-loading" color="warning" fill="outline" expand="block" class="large-button">Historial de viajes</ion-button>
+  <ion-loading trigger="open-loading" message="Cargando..." [duration]="2000" spinner="circles"></ion-loading>
+  <ion-button color="warning" fill="outline" routerLink="/login" expand="block" class="large-button">Volver al inicio</ion-button>
+  <div class="logo-duoc">
+    <img src="assets/icon/duoc.jpg" alt="Duoc logo">
+  </div>
+</ion-content>
