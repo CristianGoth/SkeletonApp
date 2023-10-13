@@ -17,16 +17,9 @@ ion-content {
     color: #f4f4f4;
 }
 ion-button {
-    --background: $primary-color;
-    --color: #ffffff; 
+    color: yellow;
     position: center;
-    &.secondary {
-      --background: $secondary-color;
-    }
-  
-    &.danger {
-      --background: $danger-color;
-    }
+    
   }
 ion-header {
   --background: $primary-color;

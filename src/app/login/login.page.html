@@ -1,15 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>TeLlevoAPP</ion-title>
+  <ion-toolbar class=" toolbar">
+    <ion-title>TeLlevo<span>APP</span></ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-title>Bienvenido!</ion-title>
+<ion-card-header class="bienvenido">
+      <ion-title>Bienvenido</ion-title>
     </ion-card-header>
-    <ion-card-content>
+<ion-content>
+  <div class="item-content">
       <ion-item lines="full">
         <ion-label position="floating">Usuario</ion-label>
         <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
@@ -20,11 +18,14 @@
       </ion-item>
       <ion-row>
         <ion-col>
-          <ion-button expand="block"  (click)="ingresar()">Ingresar</ion-button>
-          <ion-button routerLink="/recuperar"expand="block"  color="primary">Recuperar contraseña</ion-button>        
+          <ion-button  color="warning" fill="outline" expand="block" (click)="ingresar()">Ingresar</ion-button>
+          <ion-button  color="warning" fill="outline" routerLink="/recuperar"expand="block">Recuperar contraseña</ion-button> 
+                
         </ion-col>
       </ion-row>
-    </ion-card-content>
-  </ion-card>
+  </div>
+  <div class="logo-duoc">
+    <img src="assets/icon/duoc.jpg" alt="Duoc logo">
+  </div>
   
 </ion-content>
