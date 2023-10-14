@@ -1,47 +1,50 @@
 <ion-header>
   <ion-toolbar class="toolbar">
-    <ion-buttons slot="start" >
-     </ion-buttons>
+    <ion-buttons slot="start">
+    </ion-buttons>
     <ion-title>TeLlevo<span>APP</span></ion-title>
   </ion-toolbar>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </ion-header>
 
 <ion-content>
-
   <div class="item-content">
     <div class="texto">
       <ion-text> Bienvenido: </ion-text>
       <ion-label >Usuario: {{data.usuario}}</ion-label>
     </div>
-
+    <div id="map" style="height: 300px;"></div>
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Pide un viaje acercamiento </ion-card-title>
+        <ion-card-title>Pide un viaje acercamiento</ion-card-title>
       </ion-card-header>
-    
       <ion-card-content>
-      <ion-button color="warning" fill="outline" routerLink="/pasajero" >Pasajero</ion-button>
-
+        <ion-button color="warning" fill="outline" routerLink="/pasajero">Pasajero</ion-button>
       </ion-card-content>
-
     </ion-card>
     <ion-card>
       <ion-card-header>
         <ion-card-title>Lleva a tus compañeros</ion-card-title>
       </ion-card-header>
-    
       <ion-card-content>
         <ion-button color="warning" fill="outline" routerLink="/conductor">Conductor</ion-button>
       </ion-card-content>
     </ion-card>
-
     <ion-button color="warning" fill="outline" routerLink="/login" expand="block" class="large-button">Volver al inicio</ion-button>
-
   </div>
-
- 
+<br>
+<br>
   <div class="logo-duoc">
     <img src="assets/icon/duoc.jpg" alt="Duoc logo">
   </div>
 
+  <script>
+    // Espera a que la página esté completamente cargada antes de iniciar el mapa
+    document.addEventListener('ionViewDidEnter', () => {
+      var map = L.map('map').setView([-33.042113, -71.557180], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+      }).addTo(map);
+    });
+  </script>
 </ion-content>
