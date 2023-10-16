@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start" >
+     </ion-buttons>
+    <ion-title>TeLlevo<span>APP</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Perfil" src="assets/icon/perf.png"/>
+    </ion-avatar>
+    <ion-label>Informacion personal</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label ="Nombre completo" value="Jean Franco Rivera" [readonly]="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Correo electronico" value="jea.riverav@duocuc.cl" [readonly]="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Numero " value="+56957520393" [readonly]="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Direccion" value="Del manzano 3124 Miraflores" [readonly]="true"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-button color="warning" fill="outline" routerLink="/conductor">SALIR</ion-button>
+<ion-button color="warning" fill="outline" class="large-button">Editar</ion-button>
+<div class="logo-duoc">
+  <img src="assets/icon/duoc.jpg" alt="Duoc logo">
+</div>
+</ion-content>
