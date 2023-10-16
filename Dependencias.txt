@@ -6,7 +6,7 @@ npm install @ionic-native/status-bar --legacy-peer-deps
 
 npm i @ionic-native/core --legacy-peer-deps
 
-
+API-KEY=AIzaSyDQG5xdbLzU7muFx6tNkAixBS1ysI0j0xo
 
 Dependencias de SplashScreen
 
