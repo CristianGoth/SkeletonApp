@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>TeLlevo<span>APP</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfiles</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="apirick"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="character">
+    <ion-card>
+      <ion-card-content>
+        <img src="{{character.image}}" alt="">
+        <ion-card-title>
+          {{character.name}}
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'miperfil',
     loadChildren: () => import('./miperfil/miperfil.module').then( m => m.MiperfilPageModule)
   },
+  {
+    path: 'apirick',
+    loadChildren: () => import('./apirick/apirick.module').then( m => m.ApirickPageModule)
+  },
+  {
+    path: 'perfiles/:id',
+    loadChildren: () => import('./perfiles/perfiles.module').then( m => m.PerfilesPageModule)
+  },
 ];
 
 @NgModule({
