@@ -39,6 +39,7 @@ const routes: Routes = [
     path: 'perfiles/:id',
     loadChildren: () => import('./perfiles/perfiles.module').then( m => m.PerfilesPageModule)
   },
+  
 ];
 
 @NgModule({

@@ -1,22 +1,29 @@
 <ion-header>
   <ion-toolbar class="toolbar">
-    <ion-buttons slot="start" >
-     </ion-buttons>
+    <ion-buttons slot="start">
+      <!-- Agrega botones u otros elementos aquí si es necesario -->
+    </ion-buttons>
     <ion-title>TeLlevo<span>APP</span></ion-title>
   </ion-toolbar>
+  
 </ion-header>
+
 <ion-content>
-  <ion-card color="warning">
-    <ion-card-header>
-      <ion-card-title>INICIAR NUEVO VIAJE</ion-card-title> 
-      <ion-card-subtitle>Jean Rivera</ion-card-subtitle>
-    </ion-card-header>
-  </ion-card>
-  <ion-button color="warning" fill="outline" routerLink="/miperfil" class="large-button">Mi Perfil</ion-button>
-  <ion-button id="open-loading" color="warning" fill="outline" expand="block" class="large-button">Historial de viajes</ion-button>
-  <ion-loading trigger="open-loading" message="Cargando..." [duration]="2000" spinner="circles"></ion-loading>
-  <ion-button color="warning" fill="outline" routerLink="/home" expand="block" class="large-button">Volver al inicio</ion-button>
-  <div class="logo-duoc">
-    <img src="assets/icon/duoc.jpg" alt="Duoc logo">
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Fecha</ion-label>
+      <ion-input type="date" [(ngModel)]="fecha" name="fecha" label="Fecha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Hora</ion-label>
+      <ion-input type="time" [(ngModel)]="hora" name="hora" label="Hora"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="primary">Ubicación</ion-label>
+      <ion-input type="text" [(ngModel)]="ubicacion" name="ubicacion" label="Ubicación"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" (click)="guardarViaje()">Guardar Viaje</ion-button>
+  <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" expand="full" routerLink="/home" >Regresar</ion-button>
 </ion-content>
