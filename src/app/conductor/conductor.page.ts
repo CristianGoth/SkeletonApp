@@ -10,6 +10,8 @@ export class ConductorPage {
   fecha: string = ' ';
   hora: string = ' ';
   ubicacion: string = ' ';
+  cupos: string = ' ';
+  precio: string = ' ';
 
   constructor(private storage: Storage) {
     this.createDatabase(); // Llama a createDatabase al constructor
@@ -20,7 +22,7 @@ export class ConductorPage {
   }
 
   guardarViaje() {
-    const viaje = { fecha: this.fecha, hora: this.hora, ubicacion: this.ubicacion };
+    const viaje = { fecha: this.fecha, hora: this.hora, ubicacion: this.ubicacion, cupos: this.cupos, precio: this.precio };
     this.storage.get('viajes').then((viajes: any[]) => {
       if (viajes) {
         viajes.push(viaje);

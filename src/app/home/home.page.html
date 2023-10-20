@@ -35,14 +35,4 @@
   <div class="logo-duoc">
     <img src="assets/icon/duoc.jpg" alt="Duoc logo">
   </div>
-
-  <script>
-    // Espera a que la página esté completamente cargada antes de iniciar el mapa
-    document.addEventListener('ionViewDidEnter', () => {
-      var map = L.map('map').setView([-33.042113, -71.557180], 15);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-      }).addTo(map);
-    });
-  </script>
 </ion-content>

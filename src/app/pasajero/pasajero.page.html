@@ -13,9 +13,16 @@
       <ion-label>
         <h2>Fecha: {{ viaje.fecha }}</h2>
         <p>Hora: {{ viaje.hora }}</p>
+        <p>Precio: ${{ viaje.precio }}</p>
+        <p>Cupos disponibles: {{ viaje.cupos }}</p>
         <p>Ubicación: {{ viaje.ubicacion }}</p>
+        <br>
+        <br>
       </ion-label>
     </ion-item>
   </ion-list>
   <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" expand="full" routerLink="/home" >Regresar</ion-button>
+  <div class="logo-duoc">
+    <img src="assets/icon/duoc.jpg" alt="Duoc logo">
+  </div>
 </ion-content>

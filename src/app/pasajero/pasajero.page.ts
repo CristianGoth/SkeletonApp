@@ -11,6 +11,8 @@ export class PasajeroPage {
   fecha: string = '';
   hora: string = '';
   ubicacion: string = '';
+  cupos: string= '';
+  precio: string='';
 
   constructor(private storage: Storage) {
     this.initDatabase();
@@ -35,6 +37,8 @@ export class PasajeroPage {
       fecha: this.fecha,
       hora: this.hora,
       ubicacion: this.ubicacion,
+      cupos: this.cupos,
+      precio: this.precio,
     };
     this.viajes.push(nuevoViaje);
     await this.storage.set('viajes', this.viajes);
@@ -43,5 +47,9 @@ export class PasajeroPage {
     this.fecha = '';
     this.hora = '';
     this.ubicacion = '';
+    this.cupos = '';
+    this.precio = '';
+
   }
 }
+
