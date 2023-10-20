@@ -5,8 +5,6 @@
     <ion-title>TeLlevo<span>APP</span></ion-title>
   </ion-toolbar>
 </ion-header>
-
-
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let viaje of viajes">
@@ -17,9 +15,13 @@
         <p>Cupos disponibles: {{ viaje.cupos }}</p>
         <p>Ubicación: {{ viaje.ubicacion }}</p>
         <br>
+        <ion-avatar slot="start">
+          <img alt="auto" src="assets/icon/171241.png"/>
+        </ion-avatar>
         <br>
       </ion-label>
-    </ion-item>
+      <ion-button color="warning" fill="outline" slot="end">Tomar Viaje</ion-button>
+    </ion-item>    
   </ion-list>
   <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" expand="full" routerLink="/home" >Regresar</ion-button>
   <div class="logo-duoc">

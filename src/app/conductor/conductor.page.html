@@ -31,9 +31,17 @@
       <ion-input type="text" [(ngModel)]="ubicacion" name="ubicacion"></ion-input>
     </ion-item>
   </ion-list>
+  
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" (click)="guardarViaje()">Guardar Viaje</ion-button>
+    
+    <div style="display: flex; justify-content: flex-start; width: 100%;">
+      <ion-button color="warning" fill="outline" class="small-button" routerLink="/miperfil" >Mi Perfil</ion-button>
+      <ion-button color="warning" fill="outline" class="small-button" routerLink="/home" >Regresar</ion-button>
+    </div>
+  </div>
+  
 
-  <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" (click)="guardarViaje()">Guardar Viaje</ion-button>
-  <ion-button color="warning" fill="outline" expand="block" class="large-button" expand="full" expand="full" routerLink="/home" >Regresar</ion-button>
   <div class="logo-duoc">
     <img src="assets/icon/duoc.jpg" alt="Duoc logo">
   </div>

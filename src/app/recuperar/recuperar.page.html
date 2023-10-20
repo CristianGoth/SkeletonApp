@@ -1,17 +1,14 @@
-<ion-content [fullscreen]="true" class="center-content">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Recuperar contraseña</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-card class="content-card">
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start" >
+     </ion-buttons>
+    <ion-title>TeLlevo<span>APP</span></ion-title>
+  </ion-toolbar>
+</ion-header>
     <ion-content>
       <ion-label position="floating">Usuario</ion-label>
       <ion-input type="text"></ion-input>
-      <br>
       <ion-button color="warning" fill="outline" routerLink="/login" expand="block" (click)="mostrarAlerta()" class="large-button">Recuperar contraseña</ion-button>
       <ion-button color="warning" fill="outline" routerLink="/login" expand="block" class="large-button">Volver al inicio</ion-button>
     </ion-content>
-  </ion-card>
-</ion-content>
 

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Platform } from '@ionic/angular';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-root',

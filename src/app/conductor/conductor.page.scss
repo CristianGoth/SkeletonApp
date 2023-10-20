@@ -40,3 +40,14 @@ ion-card-content {
 ion-icon {
   padding-left: 1rem;
 }
+
+.small-button {
+    width: 100px; /* Ajusta el ancho según tu preferencia */
+    height: 30px; /* Ajusta el alto según tu preferencia */
+    font-size: 13px; /* Ajusta el tamaño del texto según tu preferencia */
+  }
+  
+  .large-button {
+    width: 100%; /* Mantén el ancho al 100% para el botón "Guardar Viaje" */
+  }
+  

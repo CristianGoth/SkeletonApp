@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-pasajero',

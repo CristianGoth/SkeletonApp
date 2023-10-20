@@ -15,7 +15,7 @@ export class RecuperarPage implements OnInit {
 async mostrarAlerta(){
   const alert = await this.AlertController.create({
     header:"Mensaje enviado",
-    message: 'se ha enviado a tu correo para restablecer la contraseña.',
+    message: 'Se ha enviado a tu correo para restablecer la contraseña.',
     buttons: ['Aceptar']
   });
   await alert.present();
