@@ -29,3 +29,9 @@ Google Map
 npm install @capacitor/google-maps --legacy-peer-deps
 
 API-KEY=AIzaSyDQG5xdbLzU7muFx6tNkAixBS1ysI0j0xo
+
+-----------------------------------------------------------------------------------
+
+FireBase
+
+npm install firebase --legacy-peer-deps
