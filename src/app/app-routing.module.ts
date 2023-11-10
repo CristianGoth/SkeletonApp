@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'perfiles/:id',
     loadChildren: () => import('./perfiles/perfiles.module').then( m => m.PerfilesPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
   
 ];
 
