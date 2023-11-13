@@ -36,8 +36,11 @@
       <ion-input [(ngModel)]="verificacion" type="password"></ion-input>
     </ion-item>
   </ion-list>
-
-  <ion-button color="warning" fill="outline" class="large-button" expand="block" (click)="registrar()">Registrarse</ion-button>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  
+  <ion-button color="warning" fill="outline" class="large-button"   expand="block" (click)="registrar()">Registrarse</ion-button>
   <ion-button color="warning" fill="outline" routerLink="/login" expand="block" class="large-button">Volver al inicio</ion-button>
 
 

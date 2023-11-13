@@ -9,17 +9,17 @@
 <ion-content>
   <div class="item-content">
       <ion-item lines="full">
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
       </ion-item>
       <ion-item lines="full">
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
       <ion-row>
         <ion-col>
           <ion-button  color="warning" fill="outline" expand="block" (click)="ingresar()">Ingresar</ion-button>
-          <ion-button color="warning" fill="outline" routerLink="/registro" expand="block" class="large-button">Registrarse</ion-button>
+          <ion-button color="warning" fill="outline" routerLink="/registro" expand="block" class="large-button">Regístrate</ion-button>
           <ion-button  color="warning" fill="outline" routerLink="/recuperar"expand="block">Recuperar contraseña</ion-button> 
                 
         </ion-col>

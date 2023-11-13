@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
-
+import { Router } from '@angular/router';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 @Component({
   selector: 'app-login',
@@ -8,24 +8,38 @@ import { Router, NavigationExtras } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  user={
-    usuario:"",
-    password:""
-  }
-  constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
-  ingresar(){
-    if (this.user.password.length < 8) {
-      alert('La contraseña debe tener al menos 8 caracteres');
-      return;
-    }    let navigationExtras: NavigationExtras = {
-      state: {
-        user: this.user
+  email: string = '';
+  password: string = '';
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {}
+
+  async ingresar() {
+    try {
+      if (this.password.length < 8) {
+        alert('La contraseña debe tener al menos 8 caracteres');
+        return;
       }
-    };
-    this.router.navigate(['/home'],navigationExtras);
-  }
 
+      const auth = getAuth();
+      const credentials = await signInWithEmailAndPassword(
+        auth,
+        this.email,
+        this.password
+      );
+
+      console.log('Inicio de sesión exitoso:', credentials);
+
+      this.router.navigate(['/home']).then(() => {
+        window.history.replaceState({}, '', '/home');
+      });
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+
+      alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+    }
+    
+  }
 }
