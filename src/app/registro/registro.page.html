@@ -1,10 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Registro</ion-title>
+  <ion-toolbar class=" toolbar">
+    <ion-title>TeLlevo<span>APP</span></ion-title>
   </ion-toolbar>
 </ion-header>
-
+<ion-card-header class="bienvenido">
+      <ion-title>Regístrate </ion-title>
+    </ion-card-header>
 <ion-content>
+  <br>
+  <br>
+  <br>
   <ion-list>
     <ion-item>
       <ion-label position="stacked">Nombre</ion-label>
@@ -32,5 +37,11 @@
     </ion-item>
   </ion-list>
 
-  <ion-button expand="full" (click)="registrar()">Registrarse</ion-button>
+  <ion-button color="warning" fill="outline" class="large-button" expand="block" (click)="registrar()">Registrarse</ion-button>
+  <ion-button color="warning" fill="outline" routerLink="/login" expand="block" class="large-button">Volver al inicio</ion-button>
+
+
+  <div class="logo-duoc">
+    <img src="assets/icon/duoc.jpg" alt="Duoc logo">
+  </div>
 </ion-content>
