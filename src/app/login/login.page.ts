@@ -8,7 +8,6 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   email: string = '';
   password: string = '';
 
@@ -24,22 +23,15 @@ export class LoginPage implements OnInit {
       }
 
       const auth = getAuth();
-      const credentials = await signInWithEmailAndPassword(
-        auth,
-        this.email,
-        this.password
-      );
+      const credentials = await signInWithEmailAndPassword(auth, this.email, this.password);
 
       console.log('Inicio de sesión exitoso:', credentials);
 
-      this.router.navigate(['/home']).then(() => {
-        window.history.replaceState({}, '', '/home');
-      });
+      // Redirige solo si el inicio de sesión es exitoso
+      this.router.navigate(['/home']);
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
-
       alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
     }
-    
   }
 }

@@ -6,9 +6,19 @@
   </ion-toolbar>
 </ion-header>
     <ion-content>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text"></ion-input>
-      <ion-button color="warning" fill="outline" routerLink="/login" expand="block" (click)="mostrarAlerta()" class="large-button">Recuperar contraseña</ion-button>
-      <ion-button color="warning" fill="outline" routerLink="/login" expand="block" class="large-button">Volver al inicio</ion-button>
+      <ion-content>
+        <ion-item>
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input [(ngModel)]="email" type="email"></ion-input>
+        </ion-item>
+        
+        <ion-button color="warning" fill="outline"  expand="block" (click)="resetearContrasena()">Enviar correo de restablecimiento</ion-button>
+        <ion-button color="warning" fill="outline" routerLink="/login" expand="block"  class="large-button">
+Volver al login        </ion-button>
+      </ion-content>      
+      
+      <div class="logo-duoc">
+        <img src="assets/icon/duoc.jpg" alt="Duoc logo">
+      </div>
     </ion-content>
 

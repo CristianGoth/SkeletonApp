@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     font-family: 'Lato', sans-serif;
 }
+
 .toolbar-color {
     background-color: #1a1a1a;
 }
@@ -9,42 +11,48 @@
 span {
     color: #ffb800;
 }
-ion-title {
-    font-size: 2rem;
-    padding: 1rem;
 
+ion-title {
+    font-size: 2rem !important;
+    padding: 1rem !important;
 }
+
 .toolbar {
     height: 10rem;
     text-align: center;
-    display: flex;
-
 }
+
 .item-content {
     margin-top: 2.5rem;
 }
+
 .btn {
     display: block;
-    
-
 }
-.ion-button{
+
+.ion-button {
     background-color: blueviolet;
-} 
+}
+
+.custom-button {
+    background-color: blueviolet;
+}
+
 .link {
     margin: 2rem;
     text-align: center;
 }
+
 a {
     text-decoration: none;
 }
+
 .logo-duoc {
-   padding-right: center;
+   padding-right: center; /* Este estilo puede no tener efecto, verifica si necesitas ajustarlo */
 }
 
-.bienvenido{
+.bienvenido {
     background-color: #1a1a1a;
-    padding-right: center;
-
-    
+    padding: 1rem; /* Ajusta el valor según tus necesidades */
+    text-align: center;
 }
