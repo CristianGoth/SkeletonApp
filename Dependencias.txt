@@ -26,7 +26,9 @@ npm install @ionic-native/splash-screen --legacy-peer-deps
 
 Google Map
 
-npm install @capacitor/google-maps --legacy-peer-deps
+
+npm install --save mapbox-gl --legacy-peer-deps
+
 
 API-KEY=AIzaSyDQG5xdbLzU7muFx6tNkAixBS1ysI0j0xo
 
