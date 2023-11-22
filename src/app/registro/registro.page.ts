@@ -29,6 +29,12 @@ export class RegistroPage {
 
         // Limpiar el mensaje de error si el registro es exitoso
         this.errorMessage = '';
+
+        // Mostrar alerta
+        alert('Gracias por registrarte');
+
+        // Redirigir al usuario a la página de login
+        this.irALogin();
       } else {
         console.log('Las contraseñas no coinciden');
         this.errorMessage = 'Las contraseñas no coinciden';
@@ -41,13 +47,17 @@ export class RegistroPage {
 
   ngOnInit() {
   }
-  ingresar(){
+
+  ingresar() {
     if (this.password.length < 8) {
       alert('La contraseña debe tener al menos 8 caracteres');
       return;
-    }    let navigationExtras: NavigationExtras = {
-      
-    };
-    this.router.navigate(['/login'],navigationExtras);
+    }
+    this.irALogin();
+  }
+
+  private irALogin() {
+    let navigationExtras: NavigationExtras = {};
+    this.router.navigate(['/login'], navigationExtras);
   }
 }
