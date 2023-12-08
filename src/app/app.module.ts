@@ -28,7 +28,6 @@ const firebaseConfig = {
   measurementId: "G-MHF17DT0HV"
 };
 
-
 const app = initializeApp(firebaseConfig);
 
 @NgModule({
