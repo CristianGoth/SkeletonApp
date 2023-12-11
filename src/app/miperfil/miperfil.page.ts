@@ -1,7 +1,7 @@
 // miperfil.page.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FirebaseService } from 'src/app/services/firebase.service'; // Ajusta la ruta según la ubicación real
+import { FirebaseService } from 'src/app/services/firebase.service'; // Ajusta la ruta a tu ubicación real del servicio
 
 @Component({
   selector: 'app-miperfil',
